@@ -52,10 +52,7 @@ public class AVLTree {
 		// - Russ
 		root = null;
 	}
-	public void modThis(int num){
-		int numMod = ((2*num)+5)%23;
-		System.out.println(num + " -> " + numMod);
-	}
+
 	/*
 	 * debug(String)
 	 *
@@ -122,9 +119,13 @@ public class AVLTree {
 		}
 
 	}
+	//Method checks that all heights are correct in the tree
 	public boolean checkHeight(){
 		return checkHeight(root).balanced;
 	}
+	//Private helper method that utilizes recursion to check the height of all nodes
+	//If the heights aren't correct it returns an AVLNode whose 
+	//
 	private HeightChecker checkHeight(AVLNode curr){
 		if (curr == null){
 			return new HeightChecker(true,-1);
